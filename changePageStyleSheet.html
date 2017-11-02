@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>changePageStyleSheet</title>
+	<link rel="stylesheet" href="css/pink.css" id="mylink">
+	<meta content="width=device-width, initial-scale=1.0, 
+	minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" 
+	name="viewport" id="viewport" />
+	<script>
+		// gaibian(); //未声明函数，不可用。
+			window.onload=gaibian; //屏幕加载时便执行改变函数
+			window.onresize=gaibian; //屏幕变化时执行改变函数
+			function gaibian(){
+			var width=document.documentElement.clientWidth;
+			document.getElementById("output").innerHTML=width;
+			var mylink=document.getElementById("mylink");
+				
+				if (width>500) {
+					mylink.href="css/orange.css";
+				}
+				else{
+					mylink.href="css/pink.css";
+				}
+			}
+    </script>
+</head>
+
+<body>
+	<h1 id="output"></h1>
+	
+</body>
+</html>

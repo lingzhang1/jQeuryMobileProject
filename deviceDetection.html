@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>deviceDetection</title>
+	<script src="device.min.js"></script>
+</head>
+<body>
+	<h1 id="biaoti"></h1>
+	<script>
+		var myh1=document.getElementById("biaoti");
+		if (device.mobile()) {
+			myh1.innerHTML="我是手机";
+			window.location="shouji.html";}
+		else if (device.ipad()) {
+			myh1.innerHTML="我是ipad";}
+		else {
+			myh1.innerHTML="我是pc";}
+	</script>
+</body>
+</html>
